@@ -24,13 +24,13 @@ export default function Home() {
       
       <Section id="focus" title="Focus">
         <div className="space-y-6">
-          <h3 className="text-xl font-semibold mb-6 text-slate-700 dark:text-slate-300">
+          <h3 className="text-xl font-semibold mb-6 text-green-700 dark:text-green-400">
             What I optimize for
           </h3>
           <ul className="space-y-4">
             {focusAreas.map((area, index) => (
               <li key={index} className="text-lg text-slate-700 dark:text-slate-300 leading-relaxed flex items-start">
-                <span className="text-gray-500 dark:text-gray-400 mr-3 mt-1">▸</span>
+                <span className={`mr-3 mt-1 ${index % 2 === 0 ? 'text-green-500 dark:text-green-400' : 'text-gray-500 dark:text-gray-400'}`}>▸</span>
                 <span>{area}</span>
               </li>
             ))}
